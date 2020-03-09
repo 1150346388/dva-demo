@@ -8,15 +8,16 @@ const TopBar = ({ titleText, history }) => {
   let [count, setCount] = useState(0)
 
   useEffect(() => {
-    console.log('effect')
-    window.addEventListener('scroll', (e) => {
+    console.log(pageYOffset)
+    window.scrollTo({ top: 0 })
+    window.addEventListener('scroll', (e: any) => {
       let [, w] = e.path
       const { pageYOffset } = w
       setState(pageYOffset ? pageYOffset / 74 : pageYOffset)
     })
-    return window.removeEventListener('scroll', (e) => {
+    return window.removeEventListener('scroll', (e: any) => {
       let [, w] = e.path
-      const { pageYOffset } = w
+      let { pageYOffset } = w
       setState(pageYOffset ? pageYOffset / 74 : pageYOffset)
     })
   }, [])

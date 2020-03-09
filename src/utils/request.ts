@@ -5,11 +5,11 @@ function parseJSON(response) {
   return response.json();
 }
 
-export function fetchGet(url, param) {
+export function fetchGet(url: string, param?: any) {
   return request(url, 'GET')
 }
 
-export function fetchPost(url, param) {
+export function fetchPost(url: string, param?: object) {
   return request(url, 'POST', param)
 }
 
@@ -39,22 +39,27 @@ const assyParams = (obj) => {
  * @param  {object} [options] The options we want to pass to "fetch"
  * @return {object}           An object containing either "data" or "err"
  */
-function request(url, method, params) {
+function request(url, method, params?: object) {
   let headers = {
     Accept: '*/*',
   }
   if (method.toLowerCase() === 'post') {
     headers['Content-Type'] = 'application/json'
   }
-  return fetch(url, {
-    // credentials: 'include',
-    mode: 'cors',
-    method: method,
-    headers: headers,
-    body: JSON.stringify(params),
+  return new Promise(function (resolve, reject) {
+    fetch(url, {
+      // credentials: 'include',
+      mode: 'cors',
+      method: method,
+      headers: headers,
+      body: JSON.stringify(params),
+    })
+      .then(checkStatus)
+      .then(res => parseJSON(res))
+      .then(data => resolve(data))
+      .catch(e => {
+        console.error('>>>>>>>>>>', e)
+        return reject(e)
+      })
   })
-    .then(checkStatus)
-    .then(parseJSON)
-    .then(data => data)
-    .catch(err => err);
 }

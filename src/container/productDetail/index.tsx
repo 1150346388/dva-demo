@@ -16,7 +16,7 @@ export default class ProductDetail extends React.Component<any, any>  {
     const { productItem } = this.props.product
     console.log(productItem)
     return (!_isEmpty(productItem) && <div className="content" style={{ height: '110vh' }}>
-      <TopBar {...this.props} titleText={productItem['page_title']} />
+      <TopBar history={this.props.history} titleText={productItem['page_title']} />
       <div className="ui-header">
         <div className="header-panle">
           <span className="header-panle-rate">
@@ -35,7 +35,7 @@ export default class ProductDetail extends React.Component<any, any>  {
           {productItem.detail.map(d => <li>
             <span className="take-out-left" style={{ color: d.color.name }}>{d.name}</span>
             {d.value && <span className="take-out-right" style={{ color: d.color.value }} >{d.value}</span>}
-            {d.url && <a className="el-icon-arrow-right" style={{ color: d.color.value }} herf={d.url}></a>}
+            {d.url && <a className="el-icon-arrow-right" style={{ color: d.color.value }} href={d.url}></a>}
           </li>)}
         </ul>
       </div>

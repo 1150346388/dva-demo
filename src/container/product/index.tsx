@@ -10,7 +10,6 @@ export default class product extends React.Component<any, any>{
     await this.props.dispatch({
       type: 'product/list'
     })
-    console.log(this.props.product)
   }
   render() {
     const { selling: { list = [] } = {} } = this.props.product
