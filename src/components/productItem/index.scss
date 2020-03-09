@@ -1,0 +1,54 @@
+.product{
+  background: #fff;
+  padding: 0rem .4rem .4rem;
+  margin-bottom: .05rem;
+}
+.title{
+  font-size: .4rem;
+  height: 1.2rem;
+  margin-bottom: .54rem;
+}
+.title .name{
+    float: left;
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 100%;
+}
+.title .info{
+  float: right;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.body a{
+  display: block;
+}
+.body em{
+  font-size: 1rem;
+  color: #e33133;
+}
+.body span{
+  font-size: .35rem;
+  color: #e33133;
+}
+.limit{
+  font-size: .35rem
+}
+.product .button{
+  text-align: center;
+  display: block;
+  position: relative;
+  color: #fff;
+  margin-top: .5rem;
+}
+.product .button .btn{
+  width: 100%;
+  background: red;
+  border-radius: .25rem;
+  font-size: .45rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

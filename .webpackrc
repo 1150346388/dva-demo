@@ -1,0 +1,12 @@
+{
+  "env": {
+    "development": {
+      "publicPath": "/"
+    },
+    "production": {
+      "publicPath": "/h5/"
+    }
+  },
+  "disableCSSModules": true,
+  "publicPath": "/"
+}

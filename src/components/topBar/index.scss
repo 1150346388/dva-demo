@@ -1,0 +1,21 @@
+.product-title{
+    transition: all 0.4s ease 0s;
+}
+.goBack{
+  width: .6rem;
+  height: 1.21rem;
+  margin-left: .1rem;
+  background-size: .64rem auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+.right{
+  position: absolute;
+  top: 0;
+  right: 0.25rem;
+  display: inline-block;
+  font-size: .375rem;
+  color: #fff;
+}

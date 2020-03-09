@@ -1,0 +1,75 @@
+.home{
+  background-color: rgb(239, 239, 244);
+  margin-bottom: .75rem;
+}
+.carousel{
+  width: 100%;
+}
+.am-wingblank{
+  margin: 0 !important;
+}
+.el-carousel__indicators{
+  bottom: 15px !important;
+}
+.el-carousel__item img{
+  height: 576px;
+  width: 100%;
+}
+.tags{
+  height: 130px;
+  width: 100%;
+  background: #fff;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+  top: -10px;
+  z-index: 2;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: .25rem;
+}
+.tags a,a:hover{
+  flex:1;
+  text-decoration: none;
+  color:#666;
+}
+.tags .tag{
+  height: 100%;
+  background-size: 0.86rem;
+  background-position: center .8rem;
+  padding-top: 1.75rem;
+  font-size: 0.35rem;
+  line-height: 0.75rem;
+  background-repeat: no-repeat;
+}
+.total{
+  display: flex;
+}
+.total .item{
+  flex: 1;
+  font-size: .4rem;
+  color: #666;
+}
+.item i{
+  position: relative;
+  left: 1.75rem;
+  bottom: 1rem;
+}
+.item span{
+  font-size: .32rem;
+}
+.item span,.item p{
+ float: left;
+ width: 100%;
+ line-height: .2rem;
+}
+.total{
+  padding: .5rem;
+}
+.break{
+  display: inline-block;
+  height: .4rem;
+  border-left: 1px solid #000;
+  position: relative;
+  top: .225rem;
+}
